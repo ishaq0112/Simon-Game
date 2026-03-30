@@ -31,7 +31,7 @@ $(".btn").click(function () {
   // The button that is stored inside userChosenColor is pushed into userClickedPattern array
   userClickedPattern.push(userChosenColour);
 
-  CheckAnswer(userClickedPattern.length);
+  CheckAnswer(userClickedPattern.length - 1);
 
   // UI/UX of the button
   playSound(userChosenColour);
