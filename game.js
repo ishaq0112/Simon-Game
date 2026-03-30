@@ -12,19 +12,6 @@ $(document).keypress(function () {
   }
 });
 
-function playSound(name) {
-  var audio = new Audio("sounds/" + name + ".mp3");
-  audio.play();
-}
-
-function animatePress(currentColor) {
-  $("#" + currentColor).addClass("pressed");
-
-  setTimeout(function () {
-    $("#" + currentColor).removeClass("pressed");
-  }, 100);
-}
-
 $(".btn").click(function () {
   //creates a variable in which the id of the button which we clicked is stored
   var userChosenColour = $(this).attr("id");
@@ -40,7 +27,7 @@ $(".btn").click(function () {
 
 // Gives the next sequence for winning condition
 function nextSequence() {
-  
+
   userClickedPattern = [];
 
   level++;
@@ -70,5 +57,36 @@ function CheckAnswer(currentLevel) {
     }
   } else {
     console.log("Wrong");
+    playSound("wrong");
+
+    $("#level-title").text("Game Over, Press Any Key to Restart");
+
+    $("body").addClass("game-over");
+    setTimeout(function () {
+      $("body").removeClass("game-over")
+    }, 200);
+
+    StartOver();
   }
+}
+
+// playing sound for specific button 
+function playSound(name) {
+  var audio = new Audio("sounds/" + name + ".mp3");
+  audio.play();
+}
+
+// animaition of specific button 
+function animatePress(currentColor) {
+  $("#" + currentColor).addClass("pressed");
+
+  setTimeout(function () {
+    $("#" + currentColor).removeClass("pressed");
+  }, 100);
+}
+// restart the game
+function StartOver() {
+  level = 0;
+  gamePattern = [];
+  started = false;
 }
