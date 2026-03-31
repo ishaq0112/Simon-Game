@@ -6,6 +6,12 @@ The objective is to repeat an increasingly complex sequence of colors generated 
 ## Live Demo
 https://ishaq0112.github.io/Simon-Game/
 
+## Preview
+<img width="1327" height="835" alt="image" src="https://github.com/user-attachments/assets/934c2049-b6ef-4fe0-a77e-c7803ba607ac" />
+<img width="757" height="893" alt="image" src="https://github.com/user-attachments/assets/539f05e6-4171-4ddc-a70c-8d1342b79e71" />
+<img width="1929" height="871" alt="image" src="https://github.com/user-attachments/assets/bed7bc4c-eafb-4bb8-828f-11b0e791b406" />
+
+
 ## How It Works
 
 - The game generates a random color sequence.
